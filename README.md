@@ -23,6 +23,12 @@ The receipt notebook writes `receipt92.pdf` in the working directory. Its prices
 
 ## Current limitations
 
-The hotel notebook uses three sample records and has no persistent booking database. Its `Hotel.__lt__` method currently lacks a return statement, so its sorting examples need correction before their results can be relied on.
+The hotel notebook uses three sample records and has no persistent booking database. Sorting now returns comparison results and displays sorted copies, preserving hotel-to-booking associations. The example accepts variable record counts and rejects mismatched input lengths.
 
 These are learning exercises rather than complete hotel-management or billing systems.
+
+## Regression checks
+
+```bash
+python -m unittest discover -s tests -v
+```
